@@ -1,0 +1,36 @@
+server:
+  port: 3010
+spring:
+  application:
+    name: hrm-zuul #服务名
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2010/eureka/
+  instance:
+    prefer-ip-address: true  #使用ip注册到Eureka
+    instance-id: zuul-server:3010  #指定客户端实例的ID
+zuul:
+  retryable: true #是否开启重试功能
+  routes:
+    ribbon:
+      eager-load.enabled: true     # 饥饿加载
+    myUser.serviceId: user-provider #服务名
+    myUser.path: /myUser/** #哪个路径
+    xxx.serviceId: order-provider #服务名
+    xxx.path: /myOrder/** #哪个路径
+  ignored-services: "*" #哪些服务不能通过服务名访问,*表示所有的服务
+  prefix: "/services" #所有访问地址都加一个前缀
+ribbon:
+  MaxAutoRetries: 1 #对当前服务的重试次数
+  MaxAutoRetriesNextServer: 1 #切换相同Server的次数
+  OkToRetryOnAllOperations: false # 对所有的操作请求都进行重试，如post就不能重试，如果没做幂等处理，重试多次post会造成数据的多次添加或修改
+  ConnectTimeout: 250 #请求连接的超时时间
+  ReadTimeout: 3000 #请求处理的超时时间
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 15000 #如果配置ribbon的重试，hystrix的超时时间要大于ribbon的超时时间

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: eureka-service
+    name: hrm-eureka
 server:
   port: 2010
 eureka:
