@@ -3,6 +3,13 @@ server:
 spring:
   application:
     name: hrm-sysmanage
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hrm-system?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: sakura1993
+mybatis-plus:
+  type-aliases-package: com.hoki.zj.hrm.domain,com.hoki.zj.hrm.query
 eureka:
   client:
     serviceUrl:
