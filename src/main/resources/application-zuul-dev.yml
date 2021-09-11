@@ -15,10 +15,8 @@ zuul:
   routes:
     ribbon:
       eager-load.enabled: true     # 饥饿加载
-    myUser.serviceId: user-provider #服务名
-    myUser.path: /myUser/** #哪个路径
-    xxx.serviceId: order-provider #服务名
-    xxx.path: /myOrder/** #哪个路径
+    sysmanage.serviceId: hrm-sysmanage #服务名
+    sysmanage.path: /sysmanage/** #哪个路径
   ignored-services: "*" #哪些服务不能通过服务名访问,*表示所有的服务
   prefix: "/services" #所有访问地址都加一个前缀
 ribbon:
