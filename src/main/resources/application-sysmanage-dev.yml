@@ -2,7 +2,7 @@ server:
   port: 4010
 spring:
   application:
-    name: sysmanage-service
+    name: hrm-sysmanage
 eureka:
   client:
     serviceUrl:
