@@ -1,0 +1,12 @@
+server:
+  port: 4010
+spring:
+  application:
+    name: sysmanage-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2010/eureka/
+  instance:
+    prefer-ip-address: true  #使用ip注册到Eureka
+    instance-id: sysmanage-service:4010  #指定客户端实例的ID
