@@ -10,6 +10,12 @@ spring:
     password: sakura1993
 mybatis-plus:
   type-aliases-package: com.hoki.zj.hrm.domain,com.hoki.zj.hrm.query
+logging:
+  level:
+    com:
+      hoki:
+        zj: trace
+    root: info
 eureka:
   client:
     serviceUrl:
