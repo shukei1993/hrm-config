@@ -1,0 +1,25 @@
+server:
+  port: 4020
+spring:
+  application:
+    name: hrm-auth
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hrm-auth?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: sakura1993
+mybatis-plus:
+  type-aliases-package: com.hoki.zj.hrm.domain,com.hoki.zj.hrm.query
+logging:
+  level:
+    com:
+      hoki:
+        zj: trace
+    root: info
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2010/eureka/
+  instance:
+    prefer-ip-address: true  #使用ip注册到Eureka
+    instance-id: auth-service:4020  #指定客户端实例的ID
