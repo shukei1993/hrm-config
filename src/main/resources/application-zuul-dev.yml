@@ -17,8 +17,8 @@ zuul:
       eager-load.enabled: true     # 饥饿加载
     sysmanage.serviceId: hrm-sysmanage #服务名
     sysmanage.path: /sysmanage/** #哪个路径
-    sysmanage.serviceId: hrm-auth #服务名
-    sysmanage.path: /auth/** #哪个路径
+    auth.serviceId: hrm-auth #服务名
+    auth.path: /auth/** #哪个路径
   ignored-services: "*" #哪些服务不能通过服务名访问,*表示所有的服务
   prefix: "/services" #所有访问地址都加一个前缀
 ribbon:
