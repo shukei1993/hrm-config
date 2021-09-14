@@ -1,0 +1,25 @@
+server:
+  port: 4030
+spring:
+  application:
+    name: hrm-course
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hrm-course?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: sakura1993
+mybatis-plus:
+  type-aliases-package: com.hoki.zj.hrm.domain,com.hoki.zj.hrm.query
+logging:
+  level:
+    com:
+      hoki:
+        zj: trace
+    root: info
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2010/eureka/
+  instance:
+    prefer-ip-address: true  #使用ip注册到Eureka
+    instance-id: course-service:4030  #指定客户端实例的ID
