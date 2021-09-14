@@ -15,4 +15,4 @@ eureka:
       defaultZone: http://localhost:2010/eureka/
   instance:
     prefer-ip-address: true  #使用ip注册到Eureka
-    instance-id: auth-service:4020  #指定客户端实例的ID
+    instance-id: file-service:5010  #指定客户端实例的ID
