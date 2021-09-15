@@ -16,3 +16,9 @@ eureka:
   instance:
     prefer-ip-address: true  #使用ip注册到Eureka
     instance-id: file-service:5010  #指定客户端实例的ID
+alicloud:
+  oss:
+    accessId: LTAI5t7VgUEXhRSyVHkPSoiR
+    accessKey: lH6LsgTS5XQbp2dgeVUl4syHrbWPTb
+    endpoint: oss-cn-chengdu.aliyuncs.com
+    bucket: hoki-hrm
