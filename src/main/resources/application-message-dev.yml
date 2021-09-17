@@ -4,19 +4,19 @@ spring:
   application:
     name: hrm-message
   rabbitmq:
-      host: 127.0.0.1 # 主机
-      port: 5672 # 端口
-      username: guest # 用户名
-      password: guest # 密码
-      virtualHost: / # 虚拟机
-      listener:
-        simple:
-          acknowledge-mode: manual # 手动签收
-          prefetch: 1 # 单个消费者每次获取的最大消息数
-      publisher-confirms: true # 消息发送到交换机失败回调
-      publisher-returns: true  # 消息发送到队列失败回调
-      template:
-        mandatory: true # 必须设置成true 消息路由失败通知监听者，而不是将消息丢弃
+    host: 127.0.0.1 # 主机
+    port: 5672 # 端口
+    username: guest # 用户名
+    password: guest # 密码
+    virtualHost: / # 虚拟机
+    listener:
+      simple:
+        acknowledge-mode: manual # 手动签收
+        prefetch: 1 # 单个消费者每次获取的最大消息数
+    publisher-confirms: true # 消息发送到交换机失败回调
+    publisher-returns: true  # 消息发送到队列失败回调
+    template:
+      mandatory: true # 必须设置成true 消息路由失败通知监听者，而不是将消息丢弃
 #  datasource:
 #    driver-class-name: com.mysql.jdbc.Driver
 #    url: jdbc:mysql://localhost:3306/hrm-auth?useUnicode=true&characterEncoding=utf8
