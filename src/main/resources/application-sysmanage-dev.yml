@@ -23,3 +23,18 @@ eureka:
   instance:
     prefer-ip-address: true  #使用ip注册到Eureka
     instance-id: sysmanage-service:4010  #指定客户端实例的ID
+feign:
+  hystrix:
+    enabled: true #开启熔断支持
+  client:
+    config:
+      remote-service:           #服务名，填写default为所有服务
+        connectTimeout: 3000
+        readTimeout: 3000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
