@@ -1,0 +1,18 @@
+server:
+  port: 6010
+spring:
+  application:
+    name: hrm-search
+logging:
+  level:
+    com:
+      hoki:
+        zj: trace
+    root: info
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:2010/eureka/
+  instance:
+    prefer-ip-address: true  #使用ip注册到Eureka
+    instance-id: search-service:6010  #指定客户端实例的ID
