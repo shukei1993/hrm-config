@@ -50,3 +50,18 @@ imagecode:
   imageproperties:
     width: 128
     height: 38
+feign:
+  hystrix:
+    enabled: true #开启熔断支持
+  client:
+    config:
+      remote-service:           #服务名，填写default为所有服务
+        connectTimeout: 3000
+        readTimeout: 3000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
