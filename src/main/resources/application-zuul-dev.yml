@@ -12,6 +12,7 @@ eureka:
     instance-id: zuul-server:3010  #指定客户端实例的ID
 zuul:
   retryable: true #是否开启重试功能
+  sensitive-headers:     #把zuul忽略敏感请求头的配置覆盖为空
   routes:
     ribbon:
       eager-load.enabled: true     # 饥饿加载
