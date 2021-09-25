@@ -23,3 +23,12 @@ eureka:
   instance:
     prefer-ip-address: true  #使用ip注册到Eureka
     instance-id: auth-service:4020  #指定客户端实例的ID
+oauth:
+  client:
+    properties:
+      website:
+        clientSecret: 123456
+        clientId: website
+      admin:
+        clientSecret: 123456
+        clientId: admin
