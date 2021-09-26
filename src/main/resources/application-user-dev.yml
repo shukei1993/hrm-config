@@ -37,6 +37,7 @@ spring:
           max-idle: 8
 mybatis-plus:
   type-aliases-package: com.hoki.zj.hrm.domain,com.hoki.zj.hrm.query
+  mapper-locations: com/hoki/zj/hrm/mapper/*Mapper.xml
 logging:
   level:
     com:
