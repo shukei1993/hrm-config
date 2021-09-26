@@ -1,6 +1,10 @@
 server:
   port: 4020
 spring:
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: fsp_tx_group #这里和file.conf中事务组名一样
   application:
     name: hrm-auth
   datasource:
@@ -10,6 +14,7 @@ spring:
     password: sakura1993
 mybatis-plus:
   type-aliases-package: com.hoki.zj.hrm.domain,com.hoki.zj.hrm.query
+  mapper-locations: com/hoki/zj/hrm/mapper/*Mapper.xml
 logging:
   level:
     com:
