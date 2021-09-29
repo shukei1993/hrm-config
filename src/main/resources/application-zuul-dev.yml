@@ -24,6 +24,9 @@ zuul:
     hrm-course: /course/** # course route
     hrm-search: /search/** # search route
     hrm-user: /user/** # user route
+    hrm-kill-course: /killCourse/** # kill-course route
+    hrm-kill-order: /killOrder/** # kill-order route
+    hrm-kill-pay: /killPay/** # kill-pay route
   ignored-services: "*" #哪些服务不能通过服务名访问,*表示所有的服务
   prefix: "/services" #所有访问地址都加一个前缀
 ribbon:
