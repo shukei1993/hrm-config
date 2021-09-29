@@ -1,8 +1,8 @@
 server:
-  port: 4060
+  port: 4070
 spring:
   application:
-    name: hrm-kill-order
+    name: hrm-kill-pay
   rabbitmq:
     host: 127.0.0.1 # 主机
     port: 5672 # 端口
@@ -18,7 +18,7 @@ spring:
       mandatory: true # 必须设置成true 消息路由失败通知监听者，而不是将消息丢弃
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/hrm-kill-order?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/hrm-kill-pay?useUnicode=true&characterEncoding=utf8
     username: root
     password: sakura1993
   redis:
@@ -46,4 +46,4 @@ eureka:
       defaultZone: http://localhost:2010/eureka/
   instance:
     prefer-ip-address: true  #使用ip注册到Eureka
-    instance-id: kill-order-service:4060  #指定客户端实例的ID
+    instance-id: kill-pay-service:4070  #指定客户端实例的ID

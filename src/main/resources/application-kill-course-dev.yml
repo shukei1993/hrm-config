@@ -47,7 +47,3 @@ eureka:
   instance:
     prefer-ip-address: true  #使用ip注册到Eureka
     instance-id: kill-course-service:4050  #指定客户端实例的ID
-imagecode:
-  imageproperties:
-    width: 128
-    height: 38
