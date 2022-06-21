@@ -18,7 +18,7 @@ spring:
       mandatory: true # 必须设置成true 消息路由失败通知监听者，而不是将消息丢弃
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/hrm-kill-course?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://localhost:3306/hrm-kill-course?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: sakura1993
   redis:
