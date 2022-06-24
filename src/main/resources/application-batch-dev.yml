@@ -1,36 +1,36 @@
 server:
-  port: 4030
+  port: 8010
 spring:
   application:
-    name: hrm-course
-  rabbitmq:
-    host: 127.0.0.1 # 主机
-    port: 5672 # 端口
-    username: guest # 用户名
-    password: guest # 密码
-    virtualHost: / # 虚拟机
-    listener:
-      simple:
-        prefetch: 1 # 单个消费者每次获取的最大消息数
-    publisher-confirms: true # 消息发送到交换机失败回调
-    publisher-returns: true  # 消息发送到队列失败回调
-    template:
-      mandatory: true # 必须设置成true 消息路由失败通知监听者，而不是将消息丢弃
+    name: hrm-batch
+#  rabbitmq:
+#    host: 127.0.0.1 # 主机
+#    port: 5672 # 端口
+#    username: guest # 用户名
+#    password: guest # 密码
+#    virtualHost: / # 虚拟机
+#    listener:
+#      simple:
+#        prefetch: 1 # 单个消费者每次获取的最大消息数
+#    publisher-confirms: true # 消息发送到交换机失败回调
+#    publisher-returns: true  # 消息发送到队列失败回调
+#    template:
+#      mandatory: true # 必须设置成true 消息路由失败通知监听者，而不是将消息丢弃
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/hrm-course?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: sakura1993
-  redis:
-      database: 0
-      host: 127.0.0.1
-      port: 6379
-      password: hOkI1993
-      jedis:
-        pool:
-          max-wait: 2000ms
-          min-idle: 2
-          max-idle: 8
+#  redis:
+#      database: 0
+#      host: 127.0.0.1
+#      port: 6379
+#      password: hOkI1993
+#      jedis:
+#        pool:
+#          max-wait: 2000ms
+#          min-idle: 2
+#          max-idle: 8
 mybatis-plus:
   type-aliases-package: com.hoki.zj.hrm.domain,com.hoki.zj.hrm.query
 logging:
